@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #000;
+}
+h1{
+    color: #fff;
+}
+.main-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.calculator-container{
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    height: 370px;
+    width: 310px;
+    border-radius: 40px;
+    padding-top: 20px;
+    background-color: black;
+    flex-direction: column;
+}
+button{
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+}
+input{
+    height: 60px;
+    color: white;
+    text-align:right;
+    display: flex;
+    border: 2px solid black;
+    font-size: 20px;
+    /* border: 2px solid white; */
+    background-color: #fff;  
+}
+.heading{
+    color: white;
+    font-weight:bolder;
+    font-size: 35px;
+    padding-bottom: 2rem;
+}
+h2{
+    color: #fff;
+}
+
+.slider-container{
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 1rem;
+    gap: 10px;
+}
+
+.line-one{
+    display: flex;
+    column-gap: 8px;
+}
+#ac-btn,#back-btn{
+    border-radius: 20px;
+    background-color: rgb(47, 10, 234);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+#percentage-btn,#division-btn,#mul-btn,#sub-btn,#add-btn,#equal-btn{
+    background-color: yellow;
+    font-size: 23px;
+    font-weight: 600;
+    color: #000;
+    border-radius: 10px;
+    border: 2px solid black;
+    
+}
+button{
+    font-size: 25px;
+    color: white;
+    border-radius: 10px;
+    background-color: #000;
+    border:1px solid white
+}
+#colour-btn{
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+button:hover {
+    background-color: rgb(10, 234, 215);
+    border-color: #0f0000;
+    color: black;
+    
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 33px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

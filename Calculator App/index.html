@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="heading" data-aos="fade-left">Calculator</div>
+        <div class="slider-container">
+        <h2>Off</h2>
+        <label class="switch" >
+            <input type="checkbox" onchange="toggledisplay()">
+            <span class="slider round"></span>
+        </label>
+        <h2>On</h2>
+        </div>
+        <div class="calculator-container" data-aos="fade-right">
+
+            <input type="text" id="screen" disabled>
+        </input>
+                <div class="line-one">
+                    <button id="ac-btn" onclick="reseting()">Ac</button>
+                    <button id="back-btn" onclick="deleting()">del</button>
+                    <button id="percentage-btn" onclick="percentage('%')">%</button>
+                    <button id="division-btn" onclick="change('/')">/</button>
+                </div>
+                <div class="line-one">
+                    <button onclick="change(7)">7</button>
+                    <button onclick="change(8)">8</button>
+                    <button onclick="change(9)">9</button>
+                    <button id="mul-btn" onclick="change('*')">*</button>
+                </div>
+                <div class="line-one">
+                    <button onclick="change(4)">4</button>
+                    <button onclick="change(5)">5</button>
+                    <button onclick="change(6)">6</button>
+                    <button onclick="change('-')" id="sub-btn">-</button>
+                </div>
+                <div class="line-one">
+                    <button onclick="change(1)">1</button>
+                    <button onclick="change(2)">2</button>
+                    <button onclick="change(3)">3</button>
+                    <button id="add-btn" onclick="change('+')">+</button>
+                </div>
+                <div class="line-one">
+                    <button id="colour-btn" onclick="changeColour()">Colour Changer</button>
+                    <button onclick="change(0)">0</button>
+                    <button onclick="change('.')">.</button>
+                    <button id="equal-btn" onclick="evaluating()">=</button>
+                </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+        });
+    </script>
+</body>
+</html>
+
+
+
